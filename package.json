@@ -11,14 +11,5 @@
   "dependencies": {
     "express": "^4.18.2",
     "uuid": "^9.0.0"
-  },
-  "description": "## Table of Contents * General Info * Installation * Usage * Demo * Deployed HEROKU app",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ehamzapour/Lets-Take-Notes.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ehamzapour/Lets-Take-Notes/issues"
-  },
-  "homepage": "https://github.com/ehamzapour/Lets-Take-Notes#readme"
+  }
 }

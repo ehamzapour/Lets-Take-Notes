@@ -20,7 +20,7 @@ const readFromFile = util.promisify(fs.readFile);
     api.post('/notes', (req, res) => {
         console.log(req.body);
 
-        const {title, text } = req.body;
+        const { title, text } = req.body;
 
         if (req.body) {
             const addNote = {
@@ -28,7 +28,7 @@ const readFromFile = util.promisify(fs.readFile);
                 text,
                 id: uuid.v4()
             };
-        fs.readFile('/db/db.json', 'utf8', (err, data) => {
+        fs.readFile('./db/db.json', 'utf8', (err, data) => {
             if (err) {
                 console.log(err)
             } else {
