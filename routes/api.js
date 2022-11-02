@@ -11,7 +11,7 @@ const uuid = require('uuid');
     });
 
     //POST
-    app.post('/api/notes', (req, res) => {
+    api.post('/api/notes', (req, res) => {
         let db = fs.readFileSync('db/db.json');
         db = JSON.parse(db);
         res.json(db);
@@ -28,7 +28,7 @@ const uuid = require('uuid');
     });
 
     //DELETE
-    app.delete('/api/notes/:id', (req, res) => {
+    api.delete('/api/notes/:id', (req, res) => {
         let db = JSON.parse(fs.readFileSync('db/db.json'))
         let filter = db.filter(item => item.id !== req.params.id);
         res.json(filter);
