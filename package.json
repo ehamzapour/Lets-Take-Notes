@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -11,5 +12,14 @@
     "express": "^4.18.2",
     "uuid": "^9.0.0"
   },
-  "description": ""
+  "description": "## Table of Contents * General Info * Installation * Usage * Demo * Deployed HEROKU app",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehamzapour/Lets-Take-Notes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ehamzapour/Lets-Take-Notes/issues"
+  },
+  "homepage": "https://github.com/ehamzapour/Lets-Take-Notes#readme"
 }

@@ -4,6 +4,7 @@ const path = require('path');
 const uuid = require('uuid');
 
 
+module.exports = (app) => {
 
     //GET
     api.get('/notes', (req, res) =>{
@@ -33,5 +34,4 @@ const uuid = require('uuid');
         let filter = db.filter(item => item.id !== req.params.id);
         res.json(filter);
     })
-
-    module.exports = api;
+};
