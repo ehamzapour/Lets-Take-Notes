@@ -1,6 +1,5 @@
 const api = require('express').Router();
 const fs = require('fs');
-const path = require('path');
 const uuid = require('uuid');
 
 const util = require('util');
@@ -10,7 +9,7 @@ const readFromFile = util.promisify(fs.readFile);
 
 
     //GET
-    api.get('/notes', (req, res) =>{
+    api.get('/notes', (req, res) => {
         readFromFile('./db/db.json')
         .then((data) => {
             res.json(JSON.parse(data))
@@ -24,7 +23,7 @@ const readFromFile = util.promisify(fs.readFile);
         const {title, text } = req.body;
 
         if (req.body) {
-            const note = {
+            const addNote = {
                 title,
                 text,
                 id: uuid.v4()
@@ -34,7 +33,7 @@ const readFromFile = util.promisify(fs.readFile);
                 console.log(err)
             } else {
                 const parseData = JSON.parse(data);
-                parseData.push(note);
+                parseData.push(addNote);
                 fs.writeFile('./db/db.json', JSON.stringify(parseData), (err) => {
                     if(err) {
                         console.log(err)
