@@ -32,6 +32,7 @@ module.exports = (app) => {
     api.delete('/api/notes/:id', (req, res) => {
         let db = JSON.parse(fs.readFileSync('db/db.json'))
         let filter = db.filter(item => item.id !== req.params.id);
+        fs.writeFileSync('db/db.json', JSON.stringify(filter));
         res.json(filter);
     })
 };

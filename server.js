@@ -10,6 +10,8 @@ const html = require('./routes/htmlroutes');
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true }));
 app.use(express.json());
+app.use('/api', api);
+app.use('/', html);
 
 //App listener
 app.listen(PORT, () => {

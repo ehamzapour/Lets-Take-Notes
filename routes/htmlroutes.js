@@ -1,3 +1,4 @@
+const html = require('express').Router();
 const path = require('path');
 
 module.exports = (app) => {
@@ -13,5 +14,3 @@ module.exports = (app) => {
     });
 
 };
-
-

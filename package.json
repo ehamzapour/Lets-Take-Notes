@@ -13,7 +13,6 @@
     "uuid": "^9.0.0"
   },
   "description": "## Table of Contents * General Info * Installation * Usage * Demo * Deployed HEROKU app",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ehamzapour/Lets-Take-Notes.git"
