@@ -7,9 +7,9 @@ const api = require('./routes/api');
 const html = require('./routes/htmlroutes');
 
 //Middleware
-app.use(express.static('public'));
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 app.use('/api', api);
 app.use('/', html);
 

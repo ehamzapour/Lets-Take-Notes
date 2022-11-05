@@ -32,9 +32,9 @@ const readFromFile = util.promisify(fs.readFile);
             if (err) {
                 console.log(err)
             } else {
-                const parseData = JSON.parse(data);
-                parseData.push(addNote);
-                fs.writeFile('./db/db.json', JSON.stringify(parseData), (err) => {
+                const parsedData = JSON.parse(data);
+                parsedData.push(addNote);
+                fs.writeFile('./db/db.json', JSON.stringify(parsedData), (err) => {
                     if(err) {
                         console.log(err)
                     } else {
@@ -70,22 +70,3 @@ const readFromFile = util.promisify(fs.readFile);
 
 
 module.exports = api;
-
-    // let db = fs.readFileSync('db/db.json');
-        // db = JSON.parse(db);
-        // res.json(db);
-
-        // let userNote = {
-        //     title: req.body.title,
-        //     text: req.body.text,
-        //     id: uuid.v4(),
-        // };
-
-        // db.push(userNote);
-        // fs.writeFileSync('db/db.json', JSON.stringify(db));
-        // res.json(db);
-
-         // let db = JSON.parse(fs.readFileSync('db/db.json'))
-        // let filter = db.filter(item => item.id !== req.params.id);
-        // fs.writeFileSync('db/db.json', JSON.stringify(filter));
-        // res.json(filter);
