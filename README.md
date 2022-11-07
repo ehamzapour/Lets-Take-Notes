@@ -4,7 +4,6 @@
 * General Info
 * Installation
 * Usage
-* Demo
 * Deployed HEROKU app
 
 ## General Information
@@ -18,7 +17,5 @@ npm install uuid
 ## Usage
 node server.js
 
-## Demo
-![Demo]()
-
 ## Deployed HEROKU App
+https://let-take-notes.herokuapp.com/
